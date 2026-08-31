@@ -38,6 +38,10 @@ body {
   padding: 5rem 1.5rem 2.25rem;
 }
 
+.publication-header .container.is-max-desktop {
+  max-width: 1120px;
+}
+
 .publication-venue {
   display: inline-block;
   margin: 0 0 1.1rem;
@@ -50,13 +54,18 @@ body {
 }
 
 .publication-title {
-  max-width: 980px;
+  max-width: 1120px;
   margin: 0 auto 1.7rem !important;
   color: #222 !important;
-  font-size: clamp(2.2rem, 5vw, 3.65rem) !important;
+  font-size: clamp(2.2rem, 4.2vw, 3.35rem) !important;
   font-weight: 700 !important;
   line-height: 1.15 !important;
   letter-spacing: -0.035em;
+}
+
+.publication-title-line {
+  display: block;
+  white-space: nowrap;
 }
 
 .publication-authors {
@@ -69,6 +78,19 @@ body {
   margin: 0 0.38rem;
   color: var(--primary);
   font-weight: 500;
+}
+
+.publication-authors .author-block a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.18s ease, border-color 0.18s ease;
+}
+
+.publication-authors .author-block a:hover,
+.publication-authors .author-block a:focus-visible {
+  color: var(--primary-dark);
+  border-bottom-color: currentColor;
 }
 
 .publication-authors sup {
@@ -403,6 +425,10 @@ body {
 
   .publication-title {
     font-size: 2.35rem !important;
+  }
+
+  .publication-title-line {
+    white-space: normal;
   }
 
   .section {
