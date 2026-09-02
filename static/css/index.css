@@ -129,18 +129,87 @@ body {
   background: #363636 !important;
   border: 0 !important;
   box-shadow: none !important;
+}
+
+.resource-button:disabled {
   opacity: 0.72;
   cursor: not-allowed;
 }
 
-.resource-button:disabled {
-  color: #fff;
+.resource-button:not(:disabled):hover,
+.resource-button:not(:disabled):focus {
+  background: #1f1f1f !important;
+}
+
+.arxiv-icon img {
+  width: auto;
+  height: 1.25rem;
+  filter: invert(1);
 }
 
 .resource-note {
   margin-top: 0.4rem;
   color: #9b9b9b;
   font-size: 0.72rem;
+}
+
+.citation-section {
+  border-top: 1px solid #e7ecf3;
+  background: #fff;
+}
+
+.citation-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.citation-heading .title {
+  margin: 0;
+  color: #262626;
+}
+
+.copy-bibtex {
+  min-width: 7.5rem;
+  height: 3rem;
+  border: 0;
+  background: #2864e8;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: none;
+}
+
+.copy-bibtex:hover,
+.copy-bibtex:focus {
+  background: #174fc9;
+  color: #fff;
+}
+
+.citation-box {
+  margin: 0;
+}
+
+.citation-box pre {
+  margin: 0;
+  padding: 2rem 2.25rem;
+  overflow-x: auto;
+  border: 1px solid #dce5f0;
+  border-radius: 0.75rem;
+  background: #f2f5f9;
+  color: #1f2c42;
+  box-shadow: 0 2px 5px rgba(31, 44, 66, 0.08);
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.copy-status {
+  min-height: 1.5rem;
+  margin-top: 0.5rem;
+  color: #666;
+  font-size: 0.85rem;
 }
 
 .teaser .hero-body {
@@ -467,6 +536,20 @@ body {
   .qualitative-image {
     max-width: 260px;
     margin: 0 auto 2.2rem;
+  }
+
+  .citation-heading {
+    align-items: center;
+  }
+
+  .copy-bibtex {
+    min-width: 6.5rem;
+    height: 2.75rem;
+  }
+
+  .citation-box pre {
+    padding: 1.5rem;
+    font-size: 0.85rem;
   }
 }
 
